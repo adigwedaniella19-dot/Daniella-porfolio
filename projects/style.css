@@ -1,3 +1,14 @@
+/* Basic page colours and typography */
+:root {
+    --navy: #12304a;
+    --blue: #176b87;
+    --teal: #138a8a;
+    --text: #263746;
+    --muted: #637482;
+    --border: #cbd8df;
+    --background: #f4f7f8;
+    --soft-blue: #edf5f7;
+}
 
 * {
     box-sizing: border-box;
@@ -5,288 +16,260 @@
 
 body {
     font-family: Arial, sans-serif;
+    background-color: var(--background);
+    color: var(--text);
     margin: 0;
-    background-color: #f2ebe3;
-    color: #292525;
-    line-height: 1.6;
+    padding: 32px 20px;
 }
 
-
-/* =========================
-   HEADER
-   ========================= */
-
-header {
-    background-color: #810453;
-    color: white;
-    padding: 60px 20px;
+/* The card stays centred and does not become too wide on large screens. */
+.page-container {
+    max-width: 780px;
+    margin: 0 auto;
 }
 
-.header-content {
-    width: 85%;
-    max-width: 1000px;
-    margin: auto;
+.registration-form {
+    background-color: #e6f0f3;
+    padding: 34px 40px 30px;
+    border: 1px solid #d5e0e5;
+    border-top: 6px solid var(--navy);
+    border-radius: 7px;
+    box-shadow: 0 8px 20px rgba(18, 48, 74, 0.1);
+}
+
+.form-header {
+    border-bottom: 2px solid var(--teal);
+    margin-bottom: 24px;
+    padding-bottom: 18px;
 }
 
 .eyebrow {
-    color: #d5b06a;
-    font-size: 13px;
-    font-weight: bold;
-    letter-spacing: 3px;
-    margin: 0 0 12px;
-}
-
-header h1 {
-    font-size: 44px;
-    margin: 0 0 8px;
-}
-
-.subtitle {
-    color: #eadfd5;
-    font-size: 17px;
-    margin: 0;
-}
-
-.subtitle span {
-    color: #d5b06a;
-    margin: 0 7px;
-}
-
-.header-line {
-    width: 60px;
-    height: 3px;
-    background-color: #d5b06a;
-    margin: 25px 0 18px;
-}
-
-.intro {
-    color: #d9ccc2;
-    max-width: 600px;
-    margin: 0;
-}
-
-
-/* =========================
-   MAIN CONTENT
-   ========================= */
-
-main {
-    width: 85%;
-    max-width: 1000px;
-    margin: 45px auto;
-}
-
-
-/* =========================
-   GENERAL SECTIONS
-   ========================= */
-
-section {
-    margin-bottom: 28px;
-}
-
-.standard-section,
-.skills-section {
-    background-color: #fffdf9;
-    padding: 35px;
-}
-
-
-/* =========================
-   SECTION HEADINGS
-   ========================= */
-
-.section-label {
-    color: #8a5a3b;
+    color: var(--teal);
     font-size: 12px;
     font-weight: bold;
-    letter-spacing: 2px;
+    letter-spacing: 1.8px;
+    margin: 0 0 10px;
+}
+
+h1 {
+    color: var(--navy);
+    font-size: 32px;
+    letter-spacing: 0.2px;
     margin: 0 0 7px;
 }
 
-section h2 {
-    color: #401f2d;
-    font-size: 27px;
-    margin: 0 0 15px;
+.subtitle,
+.login-prompt {
+    color: var(--muted);
+    font-size: 14px;
+    margin: 0;
 }
 
-.accent-line {
-    width: 45px;
-    height: 3px;
-    background-color: #d5b06a;
-    margin-bottom: 18px;
-}
-
-
-/* =========================
-   ABOUT SECTION
-   ========================= */
-
-.about-section {
-    background-color: #fffdf9;
-    display: flex;
-    align-items: center;
-    gap: 45px;
-    padding: 40px;
-}
-
-.profile-image {
-    flex-shrink: 0;
-}
-
-.profile-image img {
-    width: 135px;
-    height: 135px;
-    object-fit: cover;
-    display: block;
-    border-radius: 50%;
-    border: 6px solid #eadfd5;
-}
-
-.about-content {
-    flex: 1;
-}
-
-
-/* =========================
-   TEXT
-   ========================= */
-
-section p {
-    max-width: 760px;
-}
-
-
-/* =========================
-   INTERESTS & SKILLS
-   ========================= */
-
-.skills-section {
+/* Two columns on wider screens keep the form balanced. */
+.form-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 45px;
+    gap: 18px 22px;
 }
 
-.column {
-    padding-right: 25px;
-}
-
-.skills-column {
-    border-left: 2px solid #eadfd5;
-    padding-left: 40px;
-}
-
-.column ul {
-    list-style: none;
-    padding: 0;
-    margin: 20px 0 0;
-}
-
-.column li {
-    padding: 10px 0;
-    border-bottom: 1px solid #eadfd5;
-    color: #3c3636;
-}
-
-.column li::before {
-    content: "•";
-    color: #d5b06a;
-    font-weight: bold;
-    margin-right: 10px;
-}
-
-
-/* =========================
-   CONTACT
-   ========================= */
-
-.contact-section {
-    background-color: #401f2d;
-    color: white;
-    padding: 40px;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 50px;
-}
-
-.contact-section h2 {
-    color: white;
-}
-
-.contact-section .section-label {
-    color: #d5b06a;
-}
-
-.contact-section p {
-    color: #eadfd5;
-}
-
-.contact-details {
+.form-group {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    gap: 20px;
 }
 
-.contact-details span {
-    color: #d5b06a;
-    font-size: 12px;
+label,
+legend {
+    color: var(--text);
+    font-size: 14px;
     font-weight: bold;
-    letter-spacing: 1.5px;
-    text-transform: uppercase;
+    margin-bottom: 6px;
 }
 
-.contact-details p {
-    margin: 3px 0 0;
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="password"],
+input[type="date"],
+select,
+textarea {
+    width: 100%;
+    min-height: 42px;
+    padding: 10px 12px;
+    border: 1px solid var(--border);
+    border-radius: 5px;
+    font: inherit;
+    font-size: 14px;
+    background-color: #ffffff;
 }
 
+input:focus,
+select:focus,
+textarea:focus {
+    outline: none;
+    border-color: var(--blue);
+    box-shadow: 0 0 0 3px rgba(31, 111, 139, 0.12);
+}
 
-/* =========================
-   FOOTER
-   ========================= */
+.choice-group {
+    background-color: var(--soft-blue);
+    border: 1px solid #d8e6ea;
+    border-left: 3px solid var(--teal);
+    border-radius: 4px;
+    margin: 0;
+    padding: 12px 14px 13px;
+}
 
-footer {
-    background-color: #810453;
-    color: #d9ccc2;
+.choice-group legend {
+    padding: 0;
+}
+
+.choice-label {
+    display: inline-flex;
+    align-items: center;
+    font-weight: normal;
+    margin: 3px 16px 0 0;
+}
+
+.choice-label input {
+    accent-color: var(--blue);
+    margin: 0 7px 0 0;
+}
+
+.full-width {
+    grid-column: 1 / -1;
+}
+
+textarea {
+    min-height: 92px;
+    resize: vertical;
+}
+
+.form-actions {
+    display: flex;
+    gap: 12px;
+    margin-top: 24px;
+}
+
+input[type="submit"],
+input[type="reset"] {
+    border: 0;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: bold;
+    min-height: 42px;
+    padding: 10px 24px;
+    cursor: pointer;
+}
+
+.register-button {
+    background-color: var(--navy);
+    color: #ffffff;
+    min-width: 130px;
+}
+
+.clear-button {
+    background-color: #e3ebef;
+    color: var(--text);
+}
+
+.register-button:hover {
+    background-color: var(--blue);
+}
+
+.clear-button:hover {
+    background-color: #d4e0e6;
+}
+
+.login-prompt {
+    border-top: 1px solid var(--border);
+    margin-top: 24px;
+    padding-top: 18px;
     text-align: center;
-    padding: 18px;
 }
 
-footer p {
-    margin: 2px 0;
-    font-size: 13px;
+a {
+    color: var(--blue);
+    font-weight: 600;
+    text-decoration: none;
 }
 
+a:hover {
+    text-decoration: underline;
+}
 
-/* =========================
-   RESPONSIVE DESIGN
-   ========================= */
+/* Login and Forgot Password Pages */
+.login-form,
+.forgot-form {
+    max-width: 450px;
+}
 
-@media (max-width: 700px) {
+.login-form p,
+.forgot-form p {
+    text-align: center;
+    color: var(--muted);
+}
 
-    header h1 {
-        font-size: 34px;
+.form-links {
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* On small screens, stack each field in one easy-to-read column. */
+@media (max-width: 650px) {
+    body {
+        padding: 20px 12px;
     }
 
-    .about-section {
-        flex-direction: column;
-        text-align: center;
+    .registration-form {
+        padding: 28px 20px 24px;
     }
 
-    .skills-section,
-    .contact-section {
+    h1 {
+        font-size: 27px;
+    }
+
+    .form-grid {
         grid-template-columns: 1fr;
     }
 
-    .skills-column {
-        border-left: none;
-        border-top: 2px solid #eadfd5;
-        padding-left: 0;
-        padding-top: 30px;
+    .full-width {
+        grid-column: auto;
     }
 
-    .contact-details {
-        gap: 15px;
+    .form-actions {
+        flex-direction: column;
     }
 }
 
+/* Keep the form clean and readable when it is printed in an A4 report. */
+@media print {
+    @page {
+        size: A4;
+        margin: 16mm;
+    }
+
+    body {
+        background-color: #ffffff;
+        padding: 0;
+    }
+
+    .page-container {
+        max-width: none;
+    }
+
+    .registration-form {
+        border: 1px solid #9fb5c0;
+        border-top: 6px solid var(--navy);
+        border-radius: 0;
+        box-shadow: none;
+        padding: 24px 28px;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+    }
+
+    input,
+    select,
+    textarea {
+        print-color-adjust: exact;
+    }
+}

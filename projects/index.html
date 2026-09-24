@@ -1,163 +1,101 @@
-
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Daniella Adigwe | Personal Profile</title>
+    <title>Student Registration Form</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-
-    <header>
-        <div class="header-content">
-            <p class="eyebrow">PERSONAL PROFILE</p>
-
-            <h1>Daniella Adigwe</h1>
-
-            <p class="subtitle">
-                Computer Engineering Student
-                <span>|</span>
-                Aspiring Front-End Developer
-            </p>
-
-            <div class="header-line"></div>
-
-            <p class="intro">
-                Exploring technology, programming and creative web development
-                through practical learning.
-            </p>
-        </div>
-    </header>
-
-
-    <main>
-
-        <!-- About Me -->
-        <section class="about-section">
-
-            <div class="profile-image">
-                <img src="./profile.JPEG" alt="A picture of Daniella">
+    <main class="page-container">
+        <form class="registration-form" action="">
+            <div class="form-header">
+                <p class="eyebrow">STUDENT PORTAL</p>
+                <h1>Student Registration</h1>
+                <p class="subtitle">Create your student account by completing the form below.</p>
             </div>
 
-            <div class="about-content">
-
-                <p class="section-label">01 / ABOUT ME</p>
-
-                <h2>Getting to Know Me</h2>
-
-                <p>
-                    My name is Daniella. I am a Computer Engineering student
-                    with an interest in technology, programming and web development.
-                </p>
-
-                <p>
-                    I enjoy learning new technical skills and putting what I learn
-                    into practice through small projects and exercises.
-                </p>
-
-            </div>
-
-        </section>
-
-
-        <!-- Education -->
-        <section class="standard-section">
-
-            <p class="section-label">02 / EDUCATION</p>
-
-            <h2>Educational Background</h2>
-
-            <div class="accent-line"></div>
-
-            <p>
-                I am currently studying Computer Engineering at Rivers State
-                University. I am also developing my practical skills through
-                training in front-end web development using HTML, CSS and
-                JavaScript.
-            </p>
-
-        </section>
-
-
-        <!-- Interests and Skills -->
-        <section class="skills-section">
-
-            <div class="column">
-
-                <p class="section-label">03 / INTERESTS</p>
-
-                <h2>What I Enjoy</h2>
-
-                <ul>
-                    <li>Web Development</li>
-                    <li>Programming</li>
-                    <li>Technology</li>
-                    <li>Learning New Skills</li>
-                </ul>
-
-            </div>
-
-
-            <div class="column skills-column">
-
-                <p class="section-label">04 / SKILLS</p>
-
-                <h2>What I Know</h2>
-
-                <ul>
-                    <li>HTML</li>
-                    <li>Basic Web Design</li>
-                    <li>Computer Programming</li>
-                    <li>Problem Solving</li>
-                </ul>
-
-            </div>
-
-        </section>
-
-
-        <!-- Contact -->
-        <section class="contact-section">
-
-            <div>
-                <p class="section-label">05 / CONTACT</p>
-
-                <h2>Let's Connect</h2>
-
-                <p>
-                    I am interested in technology, continuous learning and
-                    opportunities to develop my practical skills.
-                </p>
-            </div>
-
-
-            <div class="contact-details">
-
-                <div>
-                    <span>Email</span>
-                    <p>adigwedaniella19@gmail.com</p>
+            <div class="form-grid">
+                <div class="form-group">
+                    <label for="fullname">Full Name</label>
+                    <input type="text" id="fullname" name="fullname" placeholder="Enter your full name">
                 </div>
 
-                <div>
-                    <span>Phone</span>
-                    <p>09045465676</p>
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" placeholder="you@example.com">
                 </div>
 
+                <div class="form-group">
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone" name="phone" placeholder="Enter your phone number">
+                </div>
+
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" placeholder="Create a password">
+                </div>
+
+                <div class="form-group">
+                    <label for="dob">Date of Birth</label>
+                    <input type="date" id="dob" name="dob">
+                </div>
+
+                <div class="form-group">
+                    <label for="department">Department</label>
+                    <select id="department" name="department">
+                        <option value="">Select Department</option>
+                        <option value="computer-engineering">Computer Engineering</option>
+                        <option value="electrical-engineering">Electrical Engineering</option>
+                        <option value="mechanical-engineering">Mechanical Engineering</option>
+                        <option value="civil-engineering">Civil Engineering</option>
+                    </select>
+                </div>
+
+                <fieldset class="choice-group">
+                    <legend>Gender</legend>
+                    <label class="choice-label" for="male">
+                        <input type="radio" id="male" name="gender" value="Male">
+                        Male
+                    </label>
+                    <label class="choice-label" for="female">
+                        <input type="radio" id="female" name="gender" value="Female">
+                        Female
+                    </label>
+                </fieldset>
+
+                <fieldset class="choice-group">
+                    <legend>Interests</legend>
+                    <label class="choice-label" for="coding">
+                        <input type="checkbox" id="coding" name="interests" value="Coding">
+                        Coding
+                    </label>
+                    <label class="choice-label" for="reading">
+                        <input type="checkbox" id="reading" name="interests" value="Reading">
+                        Reading
+                    </label>
+                    <label class="choice-label" for="music">
+                        <input type="checkbox" id="music" name="interests" value="Music">
+                        Music
+                    </label>
+                </fieldset>
+
+                <div class="form-group full-width">
+                    <label for="address">Address</label>
+                    <textarea id="address" name="address" rows="4" placeholder="Enter your address"></textarea>
+                </div>
             </div>
 
-        </section>
+            <div class="form-actions">
+                <input class="register-button" type="submit" value="Register">
+                <input class="clear-button" type="reset" value="Clear Form">
+            </div>
 
+            <p class="login-prompt">Already have an account? <a href="login.html">Login</a></p>
+        </form>
     </main>
-
-
-    <footer>
-        <p>&copy; 2026 Daniella Adigwe</p>
-        <p>Personal Profile Webpage</p>
-    </footer>
-
 </body>
 
 </html>
