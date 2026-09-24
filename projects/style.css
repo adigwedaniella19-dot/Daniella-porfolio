@@ -1,0 +1,292 @@
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-color: #f2ebe3;
+    color: #292525;
+    line-height: 1.6;
+}
+
+
+/* =========================
+   HEADER
+   ========================= */
+
+header {
+    background-color: #810453;
+    color: white;
+    padding: 60px 20px;
+}
+
+.header-content {
+    width: 85%;
+    max-width: 1000px;
+    margin: auto;
+}
+
+.eyebrow {
+    color: #d5b06a;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    margin: 0 0 12px;
+}
+
+header h1 {
+    font-size: 44px;
+    margin: 0 0 8px;
+}
+
+.subtitle {
+    color: #eadfd5;
+    font-size: 17px;
+    margin: 0;
+}
+
+.subtitle span {
+    color: #d5b06a;
+    margin: 0 7px;
+}
+
+.header-line {
+    width: 60px;
+    height: 3px;
+    background-color: #d5b06a;
+    margin: 25px 0 18px;
+}
+
+.intro {
+    color: #d9ccc2;
+    max-width: 600px;
+    margin: 0;
+}
+
+
+/* =========================
+   MAIN CONTENT
+   ========================= */
+
+main {
+    width: 85%;
+    max-width: 1000px;
+    margin: 45px auto;
+}
+
+
+/* =========================
+   GENERAL SECTIONS
+   ========================= */
+
+section {
+    margin-bottom: 28px;
+}
+
+.standard-section,
+.skills-section {
+    background-color: #fffdf9;
+    padding: 35px;
+}
+
+
+/* =========================
+   SECTION HEADINGS
+   ========================= */
+
+.section-label {
+    color: #8a5a3b;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin: 0 0 7px;
+}
+
+section h2 {
+    color: #401f2d;
+    font-size: 27px;
+    margin: 0 0 15px;
+}
+
+.accent-line {
+    width: 45px;
+    height: 3px;
+    background-color: #d5b06a;
+    margin-bottom: 18px;
+}
+
+
+/* =========================
+   ABOUT SECTION
+   ========================= */
+
+.about-section {
+    background-color: #fffdf9;
+    display: flex;
+    align-items: center;
+    gap: 45px;
+    padding: 40px;
+}
+
+.profile-image {
+    flex-shrink: 0;
+}
+
+.profile-image img {
+    width: 135px;
+    height: 135px;
+    object-fit: cover;
+    display: block;
+    border-radius: 50%;
+    border: 6px solid #eadfd5;
+}
+
+.about-content {
+    flex: 1;
+}
+
+
+/* =========================
+   TEXT
+   ========================= */
+
+section p {
+    max-width: 760px;
+}
+
+
+/* =========================
+   INTERESTS & SKILLS
+   ========================= */
+
+.skills-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 45px;
+}
+
+.column {
+    padding-right: 25px;
+}
+
+.skills-column {
+    border-left: 2px solid #eadfd5;
+    padding-left: 40px;
+}
+
+.column ul {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0 0;
+}
+
+.column li {
+    padding: 10px 0;
+    border-bottom: 1px solid #eadfd5;
+    color: #3c3636;
+}
+
+.column li::before {
+    content: "•";
+    color: #d5b06a;
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+
+/* =========================
+   CONTACT
+   ========================= */
+
+.contact-section {
+    background-color: #401f2d;
+    color: white;
+    padding: 40px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+}
+
+.contact-section h2 {
+    color: white;
+}
+
+.contact-section .section-label {
+    color: #d5b06a;
+}
+
+.contact-section p {
+    color: #eadfd5;
+}
+
+.contact-details {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+}
+
+.contact-details span {
+    color: #d5b06a;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+}
+
+.contact-details p {
+    margin: 3px 0 0;
+}
+
+
+/* =========================
+   FOOTER
+   ========================= */
+
+footer {
+    background-color: #810453;
+    color: #d9ccc2;
+    text-align: center;
+    padding: 18px;
+}
+
+footer p {
+    margin: 2px 0;
+    font-size: 13px;
+}
+
+
+/* =========================
+   RESPONSIVE DESIGN
+   ========================= */
+
+@media (max-width: 700px) {
+
+    header h1 {
+        font-size: 34px;
+    }
+
+    .about-section {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .skills-section,
+    .contact-section {
+        grid-template-columns: 1fr;
+    }
+
+    .skills-column {
+        border-left: none;
+        border-top: 2px solid #eadfd5;
+        padding-left: 0;
+        padding-top: 30px;
+    }
+
+    .contact-details {
+        gap: 15px;
+    }
+}
+
